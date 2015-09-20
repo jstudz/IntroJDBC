@@ -52,6 +52,10 @@ public class MySqlDb {
         
     }
     
+    public void updateRecord() {
+        
+    }
+    
     public void deleteRecordById(String tableName, String primaryKeyFieldName, Object primaryKey) throws SQLException {
         String pKey = " ";
         if(primaryKey instanceof String) {
@@ -73,6 +77,7 @@ public class MySqlDb {
         deleteRecord.executeUpdate();
         System.out.println("Records Updated " + deleteRecord.getUpdateCount());
     }
+    
     
     public static void main(String[] args) throws Exception {
         MySqlDb db = new MySqlDb();
