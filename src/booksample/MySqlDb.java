@@ -13,7 +13,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class MySqlDb {
     private Connection conn;
     
@@ -57,7 +56,7 @@ public class MySqlDb {
     }
     
     public void deleteRecordById(String tableName, String primaryKeyFieldName, Object primaryKey) throws SQLException {
-        String pKey = " ";
+        String pKey = "";
         if(primaryKey instanceof String) {
             pKey = "'" + (String)primaryKey + "'";
         } else {
