@@ -66,7 +66,7 @@ public class MySqlDb {
         Statement stmt = conn.createStatement();
         String sql = "DELETE FROM " + tableName + " WHERE " + primaryKeyFieldName + " = " + pKey;
         stmt.executeUpdate(sql);
-        System.out.println("Records updated: " + stmt.getUpdateCount());
+        
     }
     
     public void deleteRecordByIdPS (String tableName, String primaryKeyFieldName, Object primarKey) throws SQLException {
@@ -74,7 +74,7 @@ public class MySqlDb {
         PreparedStatement deleteRecord  = conn.prepareStatement(sql);
         deleteRecord.setObject(1, primarKey);
         deleteRecord.executeUpdate();
-        System.out.println("Records Updated " + deleteRecord.getUpdateCount());
+        
     }
     
     
